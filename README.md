@@ -95,7 +95,7 @@ Then below select:
     - **Require branches to be up to date before merging**
       In the below area, write: **build-and-test**
 - **Do not allow bypassing the above settings**
-- 
+
 ## Github PR
 Once our project is ready to be pushed we have to create another branch in order to push our commits on this temporary branch.  
 It's here that we are going to validate these commits by creating a PR.  
