@@ -92,7 +92,7 @@ Then below select:
 - **Require a pull Request before merging**  
   If you are working alone on this project, unselect the **Require approval option** (otherwise someone else than you will have to review your PR) 
 - **Require status checks to pass before merging**
-    - **Require branches to be up to date before merging**
+    - **Require branches to be up to date before merging**  
       In the below area, write: **build-and-test**
 - **Do not allow bypassing the above settings**
 
