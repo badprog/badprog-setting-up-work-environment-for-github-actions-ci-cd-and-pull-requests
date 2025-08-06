@@ -60,14 +60,14 @@ The workflow is triggered in two scenarios:
 ### 3. Jobs
 The workflow defines two jobs: **build-and-test** and **push-docker**.
 
-#### a. Job: build-and-test
+#### a. build-and-test
 This job builds the Docker image and runs tests.
 
 Runs on: ubuntu-latest (the latest Ubuntu virtual machine provided by GitHub Actions).
 
 The steps are easy to understand because there is a name explaining what they are suppose to do.
 
-#### b. Job: push-docker
+#### b. push-docker
 This job pushes the Docker image to the GHCR (GitHub Container Registry), but only if the code is pushed to the master branch.
 
 It depends on the **build-and-test** job (this job only runs if build-and-test succeeds).
