@@ -37,6 +37,7 @@ Our project will be separate in several parts:
 - Source files
 - Unit tests
 - Github PR
+- Github Rule
 - Github Actions
 - Docker image
 
@@ -92,5 +93,17 @@ It's here that we are going to valide these commits by creating a PR.
 If our tests pass, then we'll be authorized to validate this PR.  
 And once the PR is validated, the Docker image will be pushed on the GHCR and the commits on the master branch.  
 
+## Github rule
+Before pushing on the main branch, we have to be sure that a PR has been created and validated.  
+For that we need to set a Github rule.  
+To create one, let's go on your Github repository > Settings > Branches > Add classic branch protection rule.  
+In the new form, write main in the Branch name pattern area.  
+Then below select:
+- **Require a pull Request before merging**  
+  If you are working alone on this project, unselect the **Require approval option** (otherwise someone else than you will have to review your PR) 
+- **Require status checks to pass before merging**
+    - **Require branches to be up to date before merging**
+      In the below area, write: build**-and-test**
+      
 If everything succeeded then well done, our Github repository is ready to be used.  
 😎
